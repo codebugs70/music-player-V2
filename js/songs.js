@@ -1,0 +1,92 @@
+const playlist = [
+  {
+    title: "Roses",
+    artist: "The Chainsmokers",
+    image: "https://i.scdn.co/image/ab67616d0000b2738d2cfad007b9431f48aef135",
+    file: "Roses.mp3",
+  },
+  {
+    title: "Mistletoe",
+    artist: "Justin Bieber",
+    image: "https://i.scdn.co/image/ab67616d0000b2739defcccd1bce0358c4eff826",
+    file: "Mistletoe.mp3",
+  },
+  {
+    title: "Watch me miss",
+    artist: "Powfu",
+    image: "https://i.scdn.co/image/ab67616d0000b2733f8d8c9c0a55216d1b313287",
+    file: "watch me miss.mp3",
+  },
+  {
+    title: "High",
+    artist: "The Chainsmokers",
+    image: "https://i.scdn.co/image/ab67616d0000b2734ed727dc12385924bdef0e9f",
+    file: "High.mp3",
+  },
+  {
+    title: "Ice heart",
+    artist: "Powfu",
+    image: "https://i.scdn.co/image/ab67616d0000b2732506a4a9ad9d5d01bcb95443",
+    file: "ice heart.mp3",
+  },
+  {
+    title: "Beside you",
+    artist: "Keshi",
+    image: "https://i.scdn.co/image/ab67616d0000b273da53f97b4b0f1e14d854f777",
+    file: "beside you.mp3",
+  },
+  {
+    title: "Die for you",
+    artist: "Joji",
+    image: "https://i.scdn.co/image/ab67616d0000b273eaac2a7955f5b8967991cacb",
+    file: "Die For You.mp3",
+  },
+  {
+    title: "Christmas love",
+    artist: "Justin Bieber",
+    image: "https://i.scdn.co/image/ab67616d0000b273e52b6c5cc42dcfe040249bfc",
+    file: "Christmas Love.mp3",
+  },
+  {
+    title: "Robbery",
+    artist: "Juice WRLD",
+    image: "https://i.scdn.co/image/ab67616d0000b273b3d1baeaddfa1e2a3def3e35",
+    file: "Robbery.mp3",
+  },
+  {
+    title: "D2M",
+    artist: "Vorsa",
+    image: "https://i.scdn.co/image/ab67616d0000b273b8dcf92902401976b39590c6",
+    file: "D2M.mp3",
+  },
+  {
+    title: "alien abduction",
+    artist: "mididuck",
+    image: "https://i.scdn.co/image/ab67616d0000b273b140e64decaff8ebdacd391f",
+    file: "alien abduction.mp3",
+  },
+  {
+    title: "been this way",
+    artist: "Demxntia",
+    image: "https://i.scdn.co/image/ab67616d0000b27313f8c0d00ace4078f140dd56",
+    file: "been this way.mp3",
+  },
+  {
+    title: "Cherry",
+    artist: "KAYDEN",
+    image: "https://i.scdn.co/image/ab67616d0000b2732f62812a1bf4c3975cd763f9",
+    file: "cherry.mp3",
+  },
+  {
+    title: "Girl of my dreams",
+    artist: "deadbroke",
+    image: "https://i.scdn.co/image/ab67616d0000b2732b4f378211192cd7ab97805e",
+    file: "Girl of my dreams.mp3",
+  },
+  {
+    title: "I'm not alright",
+    artist: "Rxseboy",
+    image: "https://i.scdn.co/image/ab67616d00001e02a3bbb97cf2fd38cdaca507f4",
+    file: "I'm not alright.mp3",
+  },
+];

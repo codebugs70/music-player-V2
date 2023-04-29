@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ========================================= -->
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/9973/9973495.png"
+      type="image/x-icon"
+    />
+    <!-- ========================================= -->
+    <!-- FONT AWESOME LINK -->
+    <script
+      src="https://kit.fontawesome.com/5f219ec053.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ========================================= -->
+    <!-- LINK FILE CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <title>SoundScape</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- ========================================= -->
+      <!-- SIDEBAR -->
+      <section class="side-bar">
+        <h1 class="logo">Sound<span>Scape</span></h1>
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fa-solid fa-music"></i>
+              Song
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fa-solid fa-icons"></i>
+              Explore
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fa-solid fa-record-vinyl"></i>
+              Playlist
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+              <i class="fa-solid fa-user"></i>
+              Personal
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ========================================= -->
+      <!-- MAIN -->
+      <main class="main">
+        <div class="container">
+          <div class="music-container">
+            <!-- MUSIC INFO -->
+            <div class="music-info">
+              <img class="song-img" src="" alt="song-img" />
+              <h1 class="song-name">Demons</h1>
+              <span class="song-artist">Joji</span>
+            </div>
+            <!-- MUSIC LIST -->
+            <ul class="song-list">
+              <!-- <li class="song-item">
+                <div class="song-item-info">
+                  <img
+                    class="song-item-img"
+                    src="https://i.scdn.co/image/ab67616d0000b27353f6fa0d2589c6a7174f4b81"
+                    alt=""
+                  />
+                  <span>
+                    <h1 class="song-item-name">Demons</h1>
+                    <p class="song-item-artist">Joji</p>
+                  </span>
+                </div>
+                <div class="song-item-time">
+                  <span class="heart-icon">
+                    <i class="fa-solid fa-heart"></i>
+                  </span>
+                  <p>02:35</p>
+                </div>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </main>
+
+      <!-- ========================================= -->
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container">
+          <section class="control-bar">
+            <div class="control-left">
+              <img src="" alt="song-img" class="song-img" />
+              <span>
+                <h1 class="song-name">Demons</h1>
+                <p class="song-artist">Joji</p>
+              </span>
+            </div>
+            <!-- ============================== -->
+            <div class="control-mid">
+              <div class="btn-control">
+                <span class="shuffle-icon">
+                  <i class="fa-solid fa-shuffle"></i>
+                </span>
+                <span class="prev-icon">
+                  <i class="fa-solid fa-caret-left"></i>
+                </span>
+                <span class="play-icon">
+                  <i class="fa-solid fa-play"></i>
+                </span>
+                <span class="next-icon">
+                  <i class="fa-solid fa-caret-right"></i>
+                </span>
+                <span class="repeat-icon">
+                  <i class="fa-solid fa-repeat"></i>
+                </span>
+              </div>
+              <div class="range-bar-control">
+                <span class="time-start">00:00</span>
+                <input
+                  type="range"
+                  id="progress-bar"
+                  max="100"
+                  min="0"
+                  value="0"
+                />
+                <span class="time-end">02:35</span>
+              </div>
+            </div>
+            <!-- ============================== -->
+            <div class="control-right">
+              <span class="volume-icon">
+                <i class="fa-solid fa-volume-high"></i>
+              </span>
+              <input
+                type="range"
+                id="volume-bar"
+                max="100"
+                min="0"
+                value="100"
+              />
+            </div>
+          </section>
+        </div>
+      </footer>
+
+      <!-- ========================================= -->
+      <!-- AUDIO -->
+      <audio class="song-audio" src="./songs/catch-a-flight.mp3"></audio>
+    </div>
+    <!-- ========================================= -->
+    <!-- LINK FILE JAVASCRIPT -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,324 @@
+// sass ./sass/style.scss ./css/style.css --watch
+/* VARIABLES */
+$PRIMARY: #6a5af9;
+$SECONDARY: #d66efd;
+$DARK_COLOR: #18122b;
+$MIX_COLOR: linear-gradient(to right, $PRIMARY, $SECONDARY);
+$BLUR_WHITE_COLOR: rgba(255, 255, 255, 0.1);
+$WHITE_HOVER: rgba(255, 255, 255, 0.2);
+$BLUR_BLACK_COLOR: rgba(0, 0, 0, 0.5);
+/* ================================================ */
+/* GLOBAL STYLES */
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.play-icon.active,
+.shuffle-icon.active,
+.repeat-icon.active {
+  background: $MIX_COLOR;
+}
+.song-img {
+  transition: all 0.3s linear;
+}
+.song-img.active {
+  border: 3px solid $SECONDARY;
+  animation: SPIN 15s infinite linear;
+}
+@keyframes SPIN {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =================================================== */
+/* SIDE-BAR */
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: calc(100% - 100px);
+  background-color: $BLUR_BLACK_COLOR;
+  .logo {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    border-bottom: 1px solid $SECONDARY;
+    text-align: center;
+    span {
+      color: $SECONDARY;
+    }
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    &-link {
+      padding: 20px 30px;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: 500;
+      display: flex;
+      text-transform: uppercase;
+      align-items: center;
+      transition: all 0.2s linear;
+      gap: 20px;
+      &:hover {
+        transition: all 0.2s linear;
+        background: $MIX_COLOR;
+      }
+    }
+  }
+}
+/* MAIN */
+.main {
+  position: absolute;
+  left: 300px;
+  top: 0;
+  right: 0;
+  bottom: 100px;
+  .music-container {
+    margin-top: 100px;
+    display: flex;
+    gap: 50px;
+    .music-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .song-img {
+        width: 350px;
+        height: 350px;
+        border-radius: 8px;
+        &.active {
+          border-radius: 100rem;
+        }
+      }
+      .song-name {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+    .song-list {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      height: 500px;
+      overflow-y: auto;
+      gap: 10px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .song-item {
+        padding: 20px;
+        width: 100%;
+        background-color: $BLUR_BLACK_COLOR;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.2s linear;
+        cursor: pointer;
+        &.active {
+          background: $MIX_COLOR;
+        }
+        &:hover {
+          background-color: $WHITE_HOVER;
+        }
+        &-info {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+          }
+          h1 {
+            font-size: 18px;
+            font-weight: 500;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+        &-time {
+          gap: 30px;
+          display: flex;
+          align-items: center;
+          span {
+            font-size: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+/* FOOTER */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid $SECONDARY;
+  height: 100px;
+  background-color: $DARK_COLOR;
+  .control-bar {
+    display: flex;
+    align-items: center;
+    .control-left {
+      width: 20%;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      .song-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 100rem;
+      }
+      .song-name {
+        font-weight: 600;
+        font-size: 18px;
+      }
+      .song-artist {
+        font-size: 14px;
+      }
+    }
+
+    .control-mid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 60%;
+      .btn-control {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        span {
+          font-size: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 45px;
+          height: 45px;
+          background-color: $BLUR_WHITE_COLOR;
+          border-radius: 100rem;
+          transition: all 0.2s linear;
+          cursor: pointer;
+          &:hover {
+            background: $MIX_COLOR;
+          }
+        }
+      }
+      .range-bar-control {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        max-width: 500px;
+        #progress-bar {
+          width: 100%;
+        }
+      }
+    }
+
+    .control-right {
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 15px;
+      span {
+        font-size: 20px;
+        cursor: pointer;
+      }
+      #volume-bar {
+        width: 50%;
+      }
+    }
+  }
+}
+/* =================================================== */
+
+/* ================================================ */
+/* STYLE INPUT RANGE */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 8px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 8px;
+  background: linear-gradient(to right, $PRIMARY, $SECONDARY);
+}
+
+input[type="range"]::-moz-range-track {
+  height: 8px;
+  border-radius: 8px;
+  background: linear-gradient(to right, $PRIMARY, $SECONDARY);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: -4px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: -4px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, $PRIMARY, $SECONDARY);
+}
+
+input[type="range"]:focus::-moz-range-track {
+  background: linear-gradient(to right, $PRIMARY, $SECONDARY);
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  border-color: $PRIMARY;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  border-color: $PRIMARY;
+}
+
+input[type="range"]::-webkit-slider-runnable-track::-webkit-progress-value {
+  background: linear-gradient(to right, $PRIMARY, $SECONDARY);
+}
+
+input[type="range"]::-moz-range-track::-moz-progress-bar {
+  background: linear-gradient(to right, $PRIMARY, $SECONDARY);
+}
